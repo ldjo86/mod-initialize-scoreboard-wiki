@@ -1,27 +1,34 @@
-# Mod Initialize Scoreboard — Fonctionnement
+# Mod Initialize Scoreboard — Guide pratique
 
-Plugin Bukkit qui réinitialise le scoreboard pour contourner des conflits lors du chargement du monde.
+Un petit outil pour résoudre certains conflits de données de scoreboard lors du chargement d'un monde Minecraft.
 
-### 1. Catégorie officielle Bukkit Plugins, et non mod Fabric
+**Version concernée :** modudilitaire-1.0.0.jar.
 
-Catégorie officielle Bukkit Plugins, et non mod Fabric.
+## 1. Sauvegarder les données avant toute chose
 
-### 2. L'auteur annonce un nettoyage automatique du scoreboard
+Un scoreboard peut contenir des objectifs de datapacks, des scores de joueurs et des réglages du serveur. Une réinitialisation peut les faire disparaître : protège une copie complète de ton monde et de ses données.
 
-L'auteur annonce un nettoyage automatique du scoreboard.
+## 2. Choisir le bon serveur
 
-### 3. Attention : la perte d'objectifs ou de scores est possible ; faire une sauvegarde avant installation
+CurseForge distribue ce projet comme **plugin Bukkit**. Il se place dans le dossier `plugins/` d'un serveur compatible, et non dans `mods/` d'un client Fabric.
 
-Attention : la perte d'objectifs ou de scores est possible ; faire une sauvegarde avant installation.
+## 3. Effectuer un essai contrôlé
 
-### 4. Le comportement exact attend une inspection du JAR
+Utilise une copie du serveur, reproduis le problème de chargement et active le plugin uniquement dans cet environnement. Examine les journaux de démarrage et vérifie ce qui a réellement été modifié dans les objectifs de scoreboard.
 
-Le comportement exact attend une inspection du JAR.
+## 4. Décider de le garder ou de le retirer
 
-## Points à contrôler
+Quand l'erreur est résolue, vérifie les dépendances éventuelles d'autres plugins et datapacks avant de déployer la même procédure en production. Le contenu exact du JAR n'a pas encore été inspecté.
 
-Fiche CurseForge et version 1.0.0 vérifiées. Aucun JAR correspondant retrouvé sur les emplacements inspectés.
+## Checklist avant de commencer
 
-Les seuils, recettes, identifiants et comportements non explicitement mentionnés ne sont pas inventés.
+- [ ] Sauvegarde intégralement le serveur et ses objectifs scoreboard.
+- [ ] Télécharge `modudilitaire-1.0.0.jar` depuis CurseForge.
+- [ ] Place-le dans `plugins/` d'un serveur Bukkit compatible **de test**, puis redémarre.
+- [ ] Vérifie les journaux, l'état du monde et les scores avant de considérer le problème résolu.
 
-[Retour au sommaire](../README.md)
+## Fiabilité des informations
+
+Le JAR exact n'a pas été retrouvé dans les dossiers inspectés. Cette documentation s'appuie sur le classement et la description CurseForge ; les commandes, permissions et effets réels doivent être confirmés dans le plugin.
+
+[Retour au wiki](../README.md) · [CurseForge](https://www.curseforge.com/minecraft/bukkit-plugins/mod-initialize-scoreboard)
